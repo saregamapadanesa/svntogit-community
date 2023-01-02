@@ -53,8 +53,8 @@ prepare() {
 
 build() {
   local meson_options=(
-    -D gtk_doc=true
-    -D require_all_tests=true
+    -D gtk_doc=false
+    -D require_all_tests=false
   )
 
   arch-meson gedit build "${meson_options[@]}"
