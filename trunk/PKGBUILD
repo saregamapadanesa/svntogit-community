@@ -13,7 +13,7 @@ arch=('x86_64')
 url='https://lxde.org/'
 license=('GPL')
 groups=('lxde-gtk3')
-depends=('libfm-gtk3' 'lxmenu-data')
+depends=('libfm-gtk3' 'libfm-gtk2' 'lxmenu-data')
 makedepends=('intltool')
 optdepends=('gvfs: for trash support, mounting with udisks and remote filesystems'
             'xarchiver: archive management')
@@ -23,7 +23,7 @@ sha256sums=('14cb7b247493c4cce65fbb5902611e3ad00a7a870fbc1e50adc50428c5140cf7')
 
 build() {
   cd $_pkgname-$pkgver
-  ./configure --sysconfdir=/etc --prefix=/usr --with-gtk=3
+  ./configure --sysconfdir=/etc --prefix=/usr
   make
 }
 
