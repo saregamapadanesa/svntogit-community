@@ -12,7 +12,7 @@ arch=('x86_64')
 url='https://lxde.org/'
 license=('GPL')
 groups=('lxde')
-depends=('libfm-gtk2' 'lxmenu-data')
+depends=('libfm-gtk2' 'libfm-gtk3' 'lxmenu-data')
 makedepends=('intltool')
 optdepends=('gvfs: for trash support, mounting with udisks and remote filesystems'
             'xarchiver: archive management')
