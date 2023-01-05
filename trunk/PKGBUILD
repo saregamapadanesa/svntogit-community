@@ -12,7 +12,7 @@ url="https://lxde.org/"
 license=('GPL2')
 groups=('lxde' 'lxde-gtk3')
 depends=('vte3')
-makedepends=('intltool')
+makedepends=('intltool' 'libxslt' 'dockbook-xml' 'dockbook-xsl')
 conflicts=('lxterminal-gtk3')
 replaces=('lxterminal-gtk3')
 source=(https://downloads.sourceforge.net/lxde/${pkgname}-${pkgver}.tar.xz)
@@ -20,7 +20,7 @@ sha256sums=('9db8748923b3fa09a82ae2210ed1fa4cdb4c45312009da9caed103d48f8e9be7')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --sysconfdir=/etc --prefix=/usr --enable-gtk3
+  ./configure --sysconfdir=/etc --prefix=/usr --enable-gtk3 --enable-man
   make
 }
 
